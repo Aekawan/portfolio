@@ -1,0 +1,111 @@
+@charset "utf-8";
+
+$family-primary: "Open Sans";
+// If need, change your variables before importing Bulma
+$title-color: #ff0000;
+
+$blue: #c2c7fb;
+$green: #9be3de;
+$lightGreen: #dcffcc;
+$black: #212121;
+$white: #ffff;
+$pink: #e6b2c6;
+$white: #ffff;
+
+$primary: $pink;
+
+
+@import "~bulma/bulma.sass";
+
+::selection {
+  color: $white;
+  background: $black;
+}
+
+.navbar-start {
+  flex-grow: 1;
+  justify-content: center;
+  text-align: center;
+}
+
+// mobile
+@media screen and (max-width: $desktop - 1px) {
+  .header {
+    padding: 0;
+  }
+  .navbar-brand {
+    display: none;
+  }
+  .force-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .navbar-end {
+    display: flex;
+    justify-content: center;
+  }
+
+  .navbar-burger {
+    margin-left: 20px;
+  }
+
+  .menu {
+    flex-direction: column;
+  }
+  .drop {
+    display: none;
+  }
+}
+
+// desk top
+@media screen and (min-width: $desktop) {
+  .header {
+    padding: 10px 112px;
+  }
+  #logo {
+    display: none;
+  }
+  .menu {
+    flex-direction: none;
+  }
+  .iframe-responsive {
+    position: absolute;
+    width: 380px;
+    height: 825px;
+    margin-left: 112px;
+    margin-top: -15px;
+    border-radius: 40px;
+    z-index: 3;
+  }
+}
+
+@media (max-width: 1407px) and (min-width: 1220px) {
+  .iframe-responsive {
+    position: absolute;
+    width: 330px;
+    height: 710px;
+    margin-left: 95px;
+    margin-top: -15px;
+    border-radius: 40px;
+    z-index: 3;
+  }
+  .drop {
+    display: none;
+  }
+}
+
+@media (max-width: 1215px) and (min-width: 1024px) {
+  .iframe-responsive {
+    position: absolute;
+    width: 268px;
+    height: 575px;
+    margin-left: 77px;
+    margin-top: -11px;
+    border-radius: 33px;
+    z-index: 3;
+  }
+  .drop {
+    display: none;
+  }
+}

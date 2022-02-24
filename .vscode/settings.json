@@ -1,0 +1,7 @@
+{
+  "path-intellisense.absolutePathToWorkspace": false,
+  "path-intellisense.mappings": {
+    "/": "${workspaceRoot}",
+    "@components": "${workspaceRoot}/src/components"
+  }
+}
